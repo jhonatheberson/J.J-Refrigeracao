@@ -586,6 +586,15 @@ h3.agile_heading {
 /*-- //clients --*/
 
 
+/*-- //pay-pall --*/
+.boton_pall{
+	position: relative;
+	
+	width: 300px;
+  left: 500px;
+}
+/*-- //pay-pall --*/
+
 .footer-top{
 	padding:5em 0;
 	    background: #171616;
@@ -884,6 +893,8 @@ button.btn1{
     -ms-border-radius: 30px;;
     -o-border-radius: 30px;
 }
+
+
 button.btn1:hover {
     background: #00acee;
     color: #fff;
@@ -896,6 +907,18 @@ button.btn1:hover {
 /*-- contact --*/
 
 /*-- Slider --*/
+
+.logo{
+	position: relative;
+	top: 0px;
+}
+
+.flexslider{
+	position: sticky;
+
+}
+
+
 #slider {
 	box-shadow: none;
 	-moz-box-shadow: none;
@@ -1048,7 +1071,7 @@ button.btn1:hover {
 }
 .rslides li {
 	-webkit-backface-visibility: hidden;
-	position: absolute;
+	position: relative;
 	display: none;
 	left: 0%;
 	top: 0;
@@ -1917,7 +1940,7 @@ button.close {
 		width: 100%;
 	}
 	.contact-form input[type="text"], .contact-form input[type="email"] {
-		width: 86%;
+		width: 80%;
 	}
 	.foot-left:nth-child(2) {
 		margin-bottom: 0em;
@@ -1957,7 +1980,7 @@ button.close {
 		margin-bottom: 2em;
 	}
 	.contact-form input[type="text"], .contact-form input[type="email"] {
-		width: 83%;
+		width: 80%;
 	}
 	button.btn1 {
 		width: 60%;
