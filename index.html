@@ -34,9 +34,27 @@
 		rel="stylesheet">
 	<!-- //google fontes -->
 
+	<script type="text/javascript">
+		
+		
+		function insere() {
+			var data = new Date();
+			var segundos = data.getSegunds();
+			var clientesantes = 1007;
+			var addclientes =  1;
+			
+
+			document.getElementById("clientes").innerHTML=1003;
+		}
+
+		function alertmanuten(){
+			alert('serviço em manutenção de formulario de contato!')
+		}
+	</script>
+
 </head>
 
-<body>
+<body onload="insere();">
 
 	<!-- banner -->
 	<div class="position">
@@ -54,7 +72,7 @@
 							</button>
 							<div class="logo">
 								<img class="img-responsive" src="images/logo3.png">
-								<h1><a class="navbar-brand" href="index.html">J.J <span>Refrigeração & Informática</span></a></h1>
+								<h1><a class="navbar-brand" href="index.html">J.J <span>Refrigeração</span></a></h1>
 							</div>
 						</div>
 
@@ -65,8 +83,8 @@
 						<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 							<nav class="link-effect-8" id="link-effect-8">
 								<ul class="nav navbar-nav">
-									<li class="scrollTop" style="background-color:rgb(255, 215, 0); border-radius: 25px"> <a
-											href="http://localhost/software/index.php/mine">Sistema</a></li>
+									<!-- <li class="scrollTop" style="background-color:rgb(255, 215, 0); border-radius: 25px"> <a -->
+											<!-- href="http://localhost/software/index.php/mine">Sistema</a></li> -->
 									<li class="active"><a href="index.html">CASA</a></li>
 									<li><a href="#about" class="scroll">QUEM SOMOS</a></li>
 									<li><a href="#services" class="scroll">SERVIÇOS</a></li>
@@ -114,8 +132,7 @@
 										<div class="agileits_w3layouts_banner_info">
 											<h2>Consertos…</h2>
 											<p>Consertamos produtos em refrigeração de todos os tipos, Ar-condicionados, Galadeiras, Freezers
-												Bebedouro, com garantias de 180 dias. Também realizamos consertos de computadores, notebooks e
-												servidores</p>
+												Bebedouro, com garantias de 180 dias.</p>
 											<div class="w3ls-button">
 												<a href="#" data-toggle="modal" data-target="#myModal">Ler mais</a>
 											</div>
@@ -126,9 +143,7 @@
 										<div class="agileits_w3layouts_banner_info">
 											<h3>Vendas…</h3>
 											<p>Comercializamos uma venda de equipamentos de refrigeração a partir de 1997, Geladeiras,
-												Ar-condicionados, compressores e gás de refrigeração, tanto novos como semi-novos. Também
-												realizamos criação de sites e aplicativos para empresas, como vendemos todos os tipos de
-												equipamentos de Informática.</p>
+												Ar-condicionados, compressores e gás de refrigeração, tanto novos como semi-novos.</p>
 											<div class="w3ls-button">
 												<a href="#" data-toggle="modal" data-target="#myModal">Ler mais</a>
 											</div>
@@ -137,8 +152,8 @@
 									<li>
 										<div class="agileits_w3layouts_banner_info">
 											<h3>Automação…</h3>
-											<p>Realizamos tudo tipo de automação, sendo ela residencial ou industrial, feito sobe medida a
-												cada necessidade da residencia ou industria, com inteligencia artificial ou não, solicite seu
+											<p>Realizamos todo tipo de automação, sendo ela residencial ou industrial, feito sobe medida a
+												cada necessidade da residência ou indústria, com inteligencia artificial ou não, solicite seu
 												orçamento.</p>
 											<div class="w3ls-button">
 												<a href="#" data-toggle="modal" data-target="#myModal">Ler mais</a>
@@ -148,10 +163,9 @@
 									<li>
 										<div class="agileits_w3layouts_banner_info">
 											<h3>Manutenções…</h3>
-											<p>Realizamos manutenção em Ar-condicionados tipo Split, e Ar-condicionados de janela. Usamos
+											<p>Realizamos manutenção em Ar-condicionados tipo Split, Ar-condicionados de janela, e arcondicionados indústriais. Usamos
 												produtos especiais contra bactérias e fungos, alem disso, aromatizantes de ambiente na conclusão
-												da manutenção. Também realizamos formatação de computadores, e notebooks e servidores, com total
-												security de arquivos.</p>
+												da manutenção.</p>
 											<div class="w3ls-button">
 												<a href="#" data-toggle="modal" data-target="#myModal">Ler mais</a>
 											</div>
@@ -179,7 +193,7 @@
 				<div class="bannergrids">
 					<ul class="banneraddress">
 						<li><span class="fa fa-envelope" aria-hidden="true"></span><a
-								href="mailto:jjrefrigeracaonatal@hotmail.com">jjrefrigeracaonatal@hotmail.com</a></li>
+								href="mailto:atendimento@jjrefrigeracaonatal.com">atendimento@jjrefrigeracaonatal.com</a></li>
 						<li><span class="fa fa-phone" aria-hidden="true"></span>+055 084 3661-1549</li>
 						<li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span>
 								Contact Us</a></li>
@@ -207,7 +221,7 @@
 				</div>
 				<div class="col-md-4 aboutgrid2">
 					<p>Esta empresa nasceu em 1997, inicialmente familiar, fundada por pai e presidente João Gomes, ele iniciou no
-						mercado de refrigeração sem saber sabedoria, era promissor, começou reciclando Ar-condicionados e motores
+						mercado de refrigeração com pouca experiência, era promissor, começou reciclando Ar-condicionados e motores
 						compressores, para venda como semi-novos e por conseqüência disso , ajudando o meio ambiente, uma empresa
 						prosperou, migrando para outras áreas da refrigeração.</p>
 				</div>
@@ -215,10 +229,9 @@
 					<p>
 						<p>Tempo depois os filhos e sócios Jhony Hebert (Gerente) e Jhonat Heberson (Administrador) começou a fazer
 							parte do desafio, hoje a JJ Refrigeração tornou-se uma fábrica de reciclagem de refrigeração, tornando
-							possível equipamentos antes que iria ser jogado sem lixo podendo ser reutilizado , para a mesma função,
-							além de consertar, de comercializar equipamentos de refrigeração novos e semi-novos (reutilização), Nós da
-							J. J Refrigeração podemos afirmar, como empresa sustentável. Agora também migrando para área de
-							informática.</p>
+							possível equipamentos antes que iria ser jogado no lixo, agora podendo ser reutilizado , para a mesma função,
+							além de consertar, de comercializar equipamentos de refrigeração novos e semi-novos (reutilização). Nós da
+							J. J Refrigeração podemos afirmar, que somos uma empresa sustentável.</p>
 				</div>
 				<div class="clearfix"> </div>
 				<!-- Aboutslider -->
@@ -261,7 +274,9 @@
 						<h4>Ano de fundação</h4>
 					</div>
 					<div class="col-md-3 bottomgrid1">
-						<h3>1007</h3>
+						
+						<h3><div id="clientes" >1007</div></h3>
+						
 						<span class="fa fa" aria-hidden="true"></span>
 						<h4>Clientes</h4>
 					</div>
@@ -305,14 +320,12 @@
 					<p>Realizamos manutenção em Ar-condicionados tipo Split, e Ar-condicionados de janela.
 						Usamos produtos especiais contra bactérias e fungos, alem disso,
 						aromatizantes de ambiente na conclusão da manutenção. 
-						Também realizamos formatação de computadores, e notebooks e servidores, com total security de arquivos.</p>
+						</p>
 				</div>
 				<div class="col-md-4 serv2">
 					<h5>Consertos em Geral <span aria-hidden="true"></span></h5>
 					<p>Consertamos produtos em refrigeração de todos os tipos, Ar-condicionados, Galadeiras, Freezers Bebedouro,
-						com garantias de 180 dias. 
-						Também realizamos consertos de computadores,
-						notebooks e servidores.</p>
+						com garantias de 180 dias.</p>
 				</div>
 
 				<div class="col-md-4 ser3">
@@ -324,9 +337,7 @@
 				<div class="col-md-4 serv4">
 					<h5>Vendas de Equipamentos em Refrigeração e Informatica <span aria-hidden="true"></span></h5>
 					<p>Comercializamos uma venda de equipamentos de refrigeração a partir de 1997, Geladeiras,
-						Ar-condicionados, compressores e gás de refrigeração, tanto novos como semi-novos. 
-						Também realizamos criação de sites e aplicativos para empresas,
-						como vendemos todos os tipos de equipamentos de Informática.</p>
+						Ar-condicionados, compressores e gás de refrigeração, tanto novos como semi-novos.</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -431,7 +442,7 @@
 								<p>Cel 2 : +55 084 98722-3907</p>
 								<p>Cel 3 : +55 084 98156-9561</p>
 								<p>Cel 4 : +55 084 99660-3143</p>
-								<p><a href="mailto:jjrefrigeracaonatal@hotmail.com">jjrefrigeracaonatal@hotmail.com</a></p>
+								<p><a href="mailto:atendimento@jjrefrigeracaonatal.com">atendimento@jjrefrigeracaonatal.com</a></p>
 								<span class="fa fa-phone" aria-hidden="true"></span>
 							</div>
 						</div>
@@ -441,11 +452,11 @@
 				<!-- //map -->
 
 				<!-- contact -->
-
+				
 				<div class="contact-form" id="contact">
 					<h3 class="w3l_header w3_agileits_header two"> <span>Envie-nos um E-Mail</h3>
 					<div class="container">
-						<form action="testmail.php" method="post">
+						<form onclick="alertmanuten()" method="post">
 							<span class="fa fa-user" aria-hidden="true"></span>
 							<input type="text" placeholder="Nome" required="nome">
 
@@ -491,14 +502,15 @@
 							</div>
 							<div class="contact-btm">
 								<span class="fa fa-globe" aria-hidden="true"></span>
-								<p><a href="#">www.jjrefrigeracaonatal.com.br</a></p>
+								<p><a href="#">www.jjrefrigeracaonatal.com</a></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="col-md-6 foot-left">
 							<h3>Escreva-se</h3>
 							<p>Fique por dentro de tudo, novidades, promoções e muito mais. </p>
-							<form action="#" method="post">
+							<!-- <form action="#" method="post"> -->
+							<form onclick="alertmanuten()" method="post">
 								<input type="text" Name="Enter Your Name" placeholder="Digite seu nome " required="">
 								<input type="email" Name="Enter Your Email" placeholder="Digite seu E-mail" required="">
 								<input type="submit" value="Escreva-se">
@@ -513,7 +525,7 @@
 				<div class="copy-right">
 					<div class="container">
 						<div class="col-md-8">
-							<p>&copy; 2018 J.J Refrigeração & informática. All rights reserved
+							<p>&copy; 2020 J.J Refrigeração. All rights reserved
 						</div>
 						<div class="col-md-4">
 							<ul class="footericons">
