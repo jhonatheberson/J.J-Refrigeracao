@@ -50,8 +50,82 @@
 		function alertmanuten(){
 			alert('serviço em manutenção de formulario de contato!')
 		}
+
+		function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://f35a1iotw1.execute-api.us-east-1.amazonaws.com/prod";
+
+            var Namere = /[A-Za-z]{1}[A-Za-z]/;
+            if (!Namere.test($("#name-input").val())) {
+                         alert ("Name can not less than 2 char");
+                return;
+            }
+            var Sobrenome = /[A-Za-z]{1}[A-Za-z]/;
+            if (!Sobrenome.test($("#sobrenome-input").val())) {
+                         alert ("Sobrenome can not less than 2 char");
+                return;
+            }
+            var mobilere = /[0-9]{10}/;
+            if (!mobilere.test($("#phone-input").val())) {
+                alert ("Please enter valid mobile number");
+                return;
+            }
+            if ($("#email-input").val()=="") {
+                alert ("Please enter your email id");
+                return;
+            }
+
+            var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+            if (!reeamil.test($("#email-input").val())) {
+                alert ("Please enter valid email address");
+                return;
+            }
+
+       var name = $("#name-input").val();
+       var sobrenome = $("#sobrenome-input").val();
+       var phone = $("#phone-input").val();
+       var email = $("#email-input").val();
+       var desc = $("#description-input").val();
+       var data = {
+          name : name,
+					sobrenome: sobrenome,
+          phone : phone,
+          email : email,
+          desc : desc
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://f35a1iotw1.execute-api.us-east-1.amazonaws.com/prod",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           // clear form and show a success message
+           alert("Successfull");
+           document.getElementById("contact-form").reset();
+       location.reload();
+         },
+         error: function () {
+           // show an error message
+           alert("UnSuccessfull");
+         }});
+     }
 	</script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88763503-2">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88763503-2');
+</script>
 </head>
 
 <body onload="insere();">
@@ -456,21 +530,21 @@
 				<div class="contact-form" id="contact">
 					<h3 class="w3l_header w3_agileits_header two"> <span>Envie-nos um E-Mail</h3>
 					<div class="container">
-						<form onclick="alertmanuten()" method="post">
+						<form  id="contact-form" method="post">
 							<span class="fa fa-user" aria-hidden="true"></span>
-							<input type="text" placeholder="Nome" required="nome">
+							<input type="text" id="name-input" placeholder="Nome" required="nome">
 
 							<span class="fa fa-user" aria-hidden="true"></span>
-							<input type="text" placeholder="Sobrenome" required="sobrenome">
+							<input type="text" id="sobrenome-input" placeholder="Sobrenome" required="sobrenome">
 
-							<textarea placeholder="Mensagem" required="mensagem"></textarea>
+							<textarea id="description-input" placeholder="Mensagem" required="mensagem"></textarea>
 							<span class="fa fa-envelope" aria-hidden="true"></span>
 
-							<input type="email" placeholder="E-mail" required="email">
+							<input type="email" id="email-input" placeholder="E-mail" required="email">
 							<span class="fa fa-phone" aria-hidden="true"></span>
 
-							<input type="text" placeholder="Telefone" required="telefone">
-							<button class="btn1">Enviar</button>
+							<input type="text" id="phone-input" placeholder="Telefone" required="telefone">
+							<button class="btn1" type="button" onClick="submitToAPI(event)">Enviar</button>
 						</form>
 					</div>
 				</div>

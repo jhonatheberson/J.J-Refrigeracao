@@ -25,6 +25,7 @@
 
       mail($to, $subject, $message, $headers);
 
-      echo "<a href="index.html"></a>";
+      
+      header('Location:index.html');
 
   ?>
