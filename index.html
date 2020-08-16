@@ -3,7 +3,7 @@
 
 <head>
 	<link rel="shortcut icon" href="images/logo4.png" type="image/x-png" />
-	<title>J.J Refrigeração & Informática | Home :: J.J Refrigeração</title>
+	<title>J.J Refrigeração | Home :: J.J Refrigeração</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -114,6 +114,53 @@
            alert("UnSuccessfull");
          }});
      }
+
+		 function signUpApi(e) {
+       e.preventDefault();
+       var URL = "https://f35a1iotw1.execute-api.us-east-1.amazonaws.com/prod";
+
+            var Namere = /[A-Za-z]{1}[A-Za-z]/;
+            if (!Namere) {
+                alert ("Name can not less than 2 char");
+                return;
+            }
+            if ($("#email-input-news").val()=="") {
+                alert ("Please enter your email id");
+                return;
+            }
+
+
+       var name = $("#name-input-news").val();
+       var email = $("#email-input-news").val();
+       
+       var data = {
+          name : name,
+					sobrenome: 'quer receber novidade',
+          phone : 'quer receber novidade',
+          email : email,
+          desc : 'quer receber novidade'
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://f35a1iotw1.execute-api.us-east-1.amazonaws.com/prod",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           // clear form and show a success message
+           alert("Successfull");
+           document.getElementById("contact-form-news").reset();
+       location.reload();
+         },
+         error: function () {
+           // show an error message
+           alert("UnSuccessfull");
+         }});
+     }
 	</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -175,7 +222,7 @@
 												aria-hidden="true"></span></a></li>
 								</ul>
 									<!-- botão paypal -->
-						<br>
+						<!-- <br>
 						<div>
 							<a class="boton_pall">
 								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -189,7 +236,7 @@
 									<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
 								</form>
 							</a>
-						</div>
+						</div> -->
 
 						<!-- botão paypal -->
 							</nav>
@@ -268,7 +315,7 @@
 					<ul class="banneraddress">
 						<li><span class="fa fa-envelope" aria-hidden="true"></span><a
 								href="mailto:atendimento@jjrefrigeracaonatal.com">atendimento@jjrefrigeracaonatal.com</a></li>
-						<li><span class="fa fa-phone" aria-hidden="true"></span>+055 084 3661-1549</li>
+						<li><span class="fa fa-phone" aria-hidden="true"></span>+055 084 98156-9561</li>
 						<li><a href="#contact" class="scroll"><span class="fa fa-long-arrow-right" aria-hidden="true"></span>
 								Contact Us</a></li>
 						<li><span class="fa fa-map-marker" aria-hidden="true"></span>Av. dos Congos, 2927
@@ -511,11 +558,8 @@
 						<div class="col-md-6">
 							<div class="gridright">
 								<h3>Telefones</h3>
-								<p>Tel : +55 084 3661-1549</p>
-								<p>Cel 1 : +55 084 98706-4194</p>
-								<p>Cel 2 : +55 084 98722-3907</p>
-								<p>Cel 3 : +55 084 98156-9561</p>
-								<p>Cel 4 : +55 084 99660-3143</p>
+								<p>Tel : +55 084 98156-9561</p>
+								<p>Cel 1 : +55 084 98722-3907</p>
 								<p><a href="mailto:atendimento@jjrefrigeracaonatal.com">atendimento@jjrefrigeracaonatal.com</a></p>
 								<span class="fa fa-phone" aria-hidden="true"></span>
 							</div>
@@ -584,10 +628,10 @@
 							<h3>Escreva-se</h3>
 							<p>Fique por dentro de tudo, novidades, promoções e muito mais. </p>
 							<!-- <form action="#" method="post"> -->
-							<form onclick="alertmanuten()" method="post">
-								<input type="text" Name="Enter Your Name" placeholder="Digite seu nome " required="">
-								<input type="email" Name="Enter Your Email" placeholder="Digite seu E-mail" required="">
-								<input type="submit" value="Escreva-se">
+							<form id="contact-form-news" method="post">
+								<input type="text" Name="Enter Your Name" id="name-input-news" placeholder="Digite seu nome " required="nome">
+								<input type="email" Name="Enter Your Email" id="email-input-news" placeholder="Digite seu E-mail" required="email">
+								<input type="submit" onClick="signUpApi(event)" value="Escreva-se">
 							</form>
 						</div>
 						<div class="clearfix"></div>
